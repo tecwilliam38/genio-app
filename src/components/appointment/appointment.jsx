@@ -5,14 +5,10 @@ import Button from "../../components/button/button.jsx";
 
 function Appointment(props) {
     return <View style={styles.appointment}>
-        <Text style={styles.name}>{props.service}</Text>
-        <Text style={styles.name}>{props.barber}</Text>
-        <Text style={styles.specialty}>{props.specialty}</Text>
+        {/* <Text style={styles.specialty}>Especialidade: {props.specialty}</Text> */}
 
         <View style={styles.container}>
-
             <View style={styles.containerBooking}>
-
                 <View style={styles.booking}>
                     <Image style={styles.icon}
                         source={icon.calendar} />
@@ -29,11 +25,15 @@ function Appointment(props) {
                     </Text>
                 </View>
 
+        <View style={{alignItems:"center"}}>
+            <Text style={styles.name}>{props.barber}</Text>
+            <Text style={styles.name}>Serviço: {props.service}</Text>
+        </View>
             </View>
 
             <View style={styles.containerButton}>
-                <Button text="Cancelar Reserva" theme="danger" 
-                onPress={()=> props.onPress(props.id_appointment)} />
+                <Button text="Cancelar Reserva" theme="danger"
+                    onPress={() => props.onPress(props.id_appointment)} />
             </View>
 
         </View>

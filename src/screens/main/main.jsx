@@ -12,7 +12,27 @@ const Tab = createBottomTabNavigator();
 function Main() {
     return(
         <Tab.Navigator>
-            <Tab.Screen name="Home" component={AbaHome} options={{
+            <Tab.Screen name="Calendar" component={AbaCalendar} options={{
+                // headerTitleAlign: "center",
+                headerShown:false,
+                headerTitle: () => {
+                    return <Image source={icon.logo} 
+                    resizeMethod="resize" />
+                },
+                tabBarShowLabel: false,
+                unmountOnBlur: true,
+                tabBarIcon: ({ focused }) => {
+                    return <Image source={icon.calendar} style={
+                        {
+                            width: 25,
+                            height: 25,
+                            opacity: focused ? 1 : 0.3
+                        }
+                    } />
+                }
+            }} />
+
+<Tab.Screen name="Home" component={AbaHome} options={{
                 headerTitleAlign: "center",
                 headerTitle: () => {
                     return <Image source={icon.logo} style={
@@ -31,28 +51,6 @@ function Main() {
                 }
             }} />
 
-            <Tab.Screen name="Calendar" component={AbaCalendar} options={{
-                headerTitleAlign: "center",
-                headerTitle: () => {
-                    return <Image source={icon.logo} style={
-                        {
-                            width: 125,
-                            height: 29
-                        }
-                    } />
-                },
-                tabBarShowLabel: false,
-                unmountOnBlur: true,
-                tabBarIcon: ({ focused }) => {
-                    return <Image source={icon.calendar} style={
-                        {
-                            width: 25,
-                            height: 25,
-                            opacity: focused ? 1 : 0.3
-                        }
-                    } />
-                }
-            }} />
 
             <Tab.Screen name="Profile" component={AbaProfile} options={{
                 headerTitleAlign: "center",

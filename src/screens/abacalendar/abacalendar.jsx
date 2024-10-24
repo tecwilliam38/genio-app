@@ -4,6 +4,8 @@ import { styles } from "./abacalendar.style.js";
 import Appointment from "../../components/appointment/appointment.jsx";
 import { useEffect, useState } from "react";
 import api from "../../constants/api.js";
+import { Image } from "react-native-elements";
+import icon from "../../constants/icon.js";
 
 function AbaCalendar() {
 
@@ -39,8 +41,10 @@ function AbaCalendar() {
 
     return (
         <View style={styles.container}>
-            <FlatList data={appointments}
-                // keyExtractor={(doc) => doc.id_barber} 
+            <Image source={icon.logo} style={{width:"100%", height:80, marginBottom:10}}
+                    resizeMode="cover" />                    
+            <FlatList data={appointments}                
+            style={{padding:12}}
                 keyExtractor={(doc) => doc.id_appointment}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => {

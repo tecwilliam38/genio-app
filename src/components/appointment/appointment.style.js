@@ -6,12 +6,13 @@ export const styles = {
         backgroundColor: COLORS.white,
         padding: 10,
         borderWidth: 1,
-        borderColor: COLORS.gray4
+        borderColor: COLORS.gray4,
+        // alignItems:"center"
     },
     name: {
         fontSize: FONT_SIZE.md,
         color: COLORS.gray1,
-        marginBottom: 2
+        marginBottom: 2,
     },
     specialty: {
         fontSize: FONT_SIZE.sm,
@@ -24,13 +25,13 @@ export const styles = {
         marginRight: 5
     },
     bookingDate: {
-        fontSize: FONT_SIZE.sm-3,
-        color: COLORS.gray3,
+        fontSize: FONT_SIZE.sm-1,
+        color: COLORS.gray2,
         marginTop: 3
     },
     bookingHour: {
-        fontSize: FONT_SIZE.sm-4,
-        color: COLORS.gray3,
+        fontSize: FONT_SIZE.sm-2,
+        color: COLORS.gray2,
         marginTop: 3
     },
     booking: {
@@ -40,10 +41,9 @@ export const styles = {
         flex: 1
     },
     containerButton: {
-        marginTop: 5,
-        marginLeft:10,
+        marginTop: 15,        
     },
     container: {
-        flexDirection: "row"
+        
     }
 }

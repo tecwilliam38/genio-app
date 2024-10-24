@@ -16,7 +16,8 @@ export const styles = {
     text: {
         color: "#fff",
         fontSize: FONT_SIZE.md,
-        textAlign: "center"
+        textAlign: "center",
+        fontWeight:"bold",
     }
 
 }

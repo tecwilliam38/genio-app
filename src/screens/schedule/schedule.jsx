@@ -26,7 +26,7 @@ function Schedule(props) {
                 booking_hour: selectedHour
             });
             if (response.data?.id_appointment) {
-                props.navigation.popToTop();
+                props.navigation.navigate("Calendar");
             }
         } catch (error) {
             if (error.response?.data.error)
